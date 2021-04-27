@@ -36,10 +36,10 @@ class TwitterDriver extends HttpDriver implements VerifiesService
         $this->config = Collection::make($this->config->get('twitter', []));
 
         $this->connection = new TwitterOAuth(
-            $this->config->get('consumer_key'),
-            $this->config->get('consumer_secret'),
-            $this->config->get('token'),
-            $this->config->get('token_secret')
+            $this->config->get('consumer_key', ''),
+            $this->config->get('consumer_secret', ''),
+            $this->config->get('token', ''),
+            $this->config->get('token_secret', '')
         );
     }
 

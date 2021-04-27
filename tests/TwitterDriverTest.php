@@ -4,16 +4,16 @@ namespace Tests;
 
 use Mockery as m;
 use BotMan\BotMan\Http\Curl;
-use PHPUnit_Framework_TestCase;
+use PHPUnit\Framework\TestCase;
 use BotMan\Drivers\Twitter\TwitterDriver;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 
-class TwitterDriverTest extends PHPUnit_Framework_TestCase
+class TwitterDriverTest extends TestCase
 {
     const TEST_SECRET = 'test';
 
-    public function tearDown()
+    public function tearDown(): void
     {
         m::close();
     }
